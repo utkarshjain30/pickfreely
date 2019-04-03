@@ -1,6 +1,28 @@
 CHANGELOG
 ---------
 
+### v3.1.6, 2019.02.22
+
+- Fixed a bug that occurred when trying to set properties of classes that were not defined in user-land.
+Those properties are now ignored.
+
+### v3.1.5, 2019.01.14
+
+- Improved parser
+
+### v3.1.4, 2019.01.14
+
+- Added support for static methods that are named using PHP keywords or magic constants.
+Ex: `A::new()`, `A::use()`, `A::if()`, `A::function()`, `A::__DIR__()`, etc.
+- Used `@internal` to mark classes & methods that are for internal use only and
+backward compatibility might be broken at some point.
+
+### v3.1.3, 2019.01.07
+
+- Fixed a bug that prevented traits to be correctly resolved when used by an
+anonymous class
+- Fixed a bug that occurred when `$this` keyword was used inside an anonymous class
+
 ### v3.1.2, 2018.12.16
 
 * Fixed a bug regarding comma trail in group-use statements. See [issue 23](https://github.com/opis/closure/issues/23)
